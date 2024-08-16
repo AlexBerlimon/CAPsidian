@@ -11,6 +11,5 @@ entity Links : cuid, managed {
     
     sourceNote : Association to one Notes;
     targetNote : Association to one Notes;
-    linkType   : String(50);
     
 }

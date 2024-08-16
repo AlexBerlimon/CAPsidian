@@ -5,7 +5,7 @@ using {
     managed
 } from '@sap/cds/common';
 
-entity Clients : cuid, managed {
+entity Users : cuid, managed {
     
     @mandatory
     @assert.format: '\b[A-Z][a-z]+(?:-[A-Z][a-z]+)?\b'
