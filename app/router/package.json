@@ -1,7 +1,8 @@
 {
   "name": "approuter",
   "dependencies": {
-    "@sap/approuter": "^16.0.0"
+    "@sap/approuter": "^16.0.0",
+    "capsidian-cds": "file:../.."
   },
   "engines": {
     "node": "^20.0.0"

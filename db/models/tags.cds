@@ -6,5 +6,5 @@ using {
 } from '@sap/cds/common';
 
 entity Tags : cuid, managed {
-   title : String(50);
+    title : String(50);
 }
