@@ -1,7 +1,18 @@
-
----
 spring:
   config.activate.on-profile: default
   sql.init.schema-locations: classpath:schema-h2.sql
+  web.resources.static-locations: file:./app/
 cds:
   data-source.auto-config.enabled: false
+security:
+  mock:
+    users:
+
+      - name: system
+        password:
+        roles:
+          - Administrators
+      - name: user
+        password: user
+        roles:
+          - User
