@@ -32,3 +32,6 @@ hs_err*
 
 # added by cds
 .cdsrc-private.json
+db/data/db.capsidianLinks.csv
+db/data/db.capsidianNotes.csv
+db/data/db.capsidianTags.csv
