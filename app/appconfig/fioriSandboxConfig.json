@@ -1,0 +1,80 @@
+{
+    "services": {
+      "LaunchPage": {
+        "adapter": {
+          "config": {
+            "catalogs": [],
+            "groups": [
+              {
+                "id": "Administration",
+                "title": "Administration",
+                "isPreset": true,
+                "isVisible": true,
+                "isGroupLocked": false,
+                "tiles": [
+                  {
+                    "id": "notesservice",
+                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                    "properties": {
+                      "title": "Notes",
+                      "targetURL": "#notes-manage"
+                    }
+                  },
+                  {
+                    "id": "linksservice",
+                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                    "properties": {
+                      "title": "Links",
+                      "targetURL": "#links-manage"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "NavTargetResolution": {
+        "config": {
+          "enableClientSideTargetResolution": true
+        }
+      },
+      "ClientSideTargetResolution": {
+        "adapter": {
+          "config": {
+            "inbounds": {
+              "linksservice": {
+                "semanticObject": "links",
+                "action": "manage",
+                "title": "Links",
+                "signature": {
+                  "parameters": {},
+                  "additionalParameters": "allowed"
+                },
+                "resolutionResult": {
+                  "applicationType": "SAPUI5",
+                  "additionalInformation": "SAPUI5.Component=linksservice",
+                  "url": "/linksservice/webapp"
+                }
+              },
+              "notesservice": {
+                "semanticObject": "notes",
+                "action": "manage",
+                "title": "Notes",
+                "signature": {
+                  "parameters": {},
+                  "additionalParameters": "allowed"
+                },
+                "resolutionResult": {
+                  "applicationType": "SAPUI5",
+                  "additionalInformation": "SAPUI5.Component=notesservice",
+                  "url": "/notesservice/webapp"
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
