@@ -1,4 +1,7 @@
 package customer.capsidian.dao;
+
+import static cds.gen.linksservice.LinksService_.*;
+
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +16,6 @@ import com.sap.cds.services.persistence.PersistenceService;
 
 import cds.gen.linksservice.Links;
 import cds.gen.linksservice.LinksService_;
-import static cds.gen.linksservice.LinksService_.LINKS;
 
 @Component
 @Qualifier(LinksService_.CDS_NAME)
@@ -21,7 +23,6 @@ public class LinksDAO {
 
     @Autowired
     private PersistenceService service;
-    
 
     public Optional<Links> createNewLink() {
         Links linkEntity = Links.create();
@@ -31,6 +32,6 @@ public class LinksDAO {
 
     public void save(Optional<Links> linkEntity) {
         CqnUpdate update = Update.entity(LINKS).entry(linkEntity.get());
-        this.service.run(update);     
+        this.service.run(update);
     }
 }
