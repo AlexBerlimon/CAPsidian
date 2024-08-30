@@ -35,3 +35,4 @@ hs_err*
 db/data/db.capsidianLinks.csv
 db/data/db.capsidianNotes.csv
 db/data/db.capsidianTags.csv
+srv/src/main/resources/ValidationMessages.properties
