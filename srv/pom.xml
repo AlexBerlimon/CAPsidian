@@ -26,6 +26,14 @@
 			<artifactId>cds-adapter-odata-v4</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.sap.cloud.db.jdbc/ngdbc -->
+		<dependency>
+    		<groupId>com.sap.cloud.db.jdbc</groupId>
+    		<artifactId>ngdbc</artifactId>
+    		<version>2.21.11</version>
+    		<type>pom</type>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -49,7 +57,26 @@
 			<groupId>com.sap.cds</groupId>
 			<artifactId>cds-starter-cloudfoundry</artifactId>
 		</dependency>
+	
+		<dependency>
+  			<groupId>com.sap.cds</groupId>
+  			<artifactId>cds-feature-hana</artifactId>
+  		<scope>runtime</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
+	
 
 	<build>
 		<finalName>${project.artifactId}</finalName>
