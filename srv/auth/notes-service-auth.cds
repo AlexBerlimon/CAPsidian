@@ -3,7 +3,7 @@ using NotesService as service from '../services/notes-service';
 annotate service.Notes with @restrict: [
     {
         grant: ['*'],
-        to   : ['Administraor']
+        to   : ['Administrators']
     },
     {
         grant: ['CREATE'],
@@ -13,9 +13,9 @@ annotate service.Notes with @restrict: [
         grant: [
             'READ',
             'UPDATE',
-            'DELETE'
+            'DELETE', 
+            'CREATE'
         ],
-        to   : ['User'],
-        where: 'createdBy = $user'
+        to   : ['Administrators'],
     }
 ];
